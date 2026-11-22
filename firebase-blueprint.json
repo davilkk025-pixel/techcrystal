@@ -1,0 +1,39 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "User Profile",
+      "type": "object",
+      "description": "User account details and profile information",
+      "properties": {
+        "id": { "type": "string" },
+        "displayName": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "photoURL": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "email"]
+    },
+    "UserFavorite": {
+      "title": "User Favorite Gadget",
+      "type": "object",
+      "description": "Saved gadget bookmarked by user",
+      "properties": {
+        "productId": { "type": "string" },
+        "name": { "type": "string" },
+        "category": { "type": "string" },
+        "savedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["productId", "name"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "User profile records accessible only by the authentic account owner"
+    },
+    "/users/{userId}/favorites/{productId}": {
+      "schema": "UserFavorite",
+      "description": "User saved bookmarks and favorites"
+    }
+  }
+}

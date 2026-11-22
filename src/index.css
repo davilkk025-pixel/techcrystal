@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #0B0F0E;
+    --card-bg: #151B19;
+    --accent-neon: #39FF14;
+    --text-main: #FFFFFF;
+    --text-secondary: #A7B0AC;
+    --border-tech: #28332D;
+  }
+
+  body {
+    background-color: #0B0F0E;
+    color: #FFFFFF;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom dark tech scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0F0E;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #28332D;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #39FF14;
+}
+
+/* Neon glows and dark tech utilities */
+.glow-neon-sm {
+  box-shadow: 0 0 12px rgba(57, 255, 20, 0.2);
+}
+
+.glow-neon {
+  box-shadow: 0 0 20px rgba(57, 255, 20, 0.35);
+}
+
+.glow-neon-lg {
+  box-shadow: 0 0 35px rgba(57, 255, 20, 0.45);
+}
+
+.glow-neon-inset {
+  box-shadow: inset 0 0 15px rgba(57, 255, 20, 0.15);
+}
+
+.border-neon-subtle {
+  border-color: #28332D;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.border-neon-subtle:hover {
+  border-color: rgba(57, 255, 20, 0.5);
+  box-shadow: 0 0 15px rgba(57, 255, 20, 0.15);
+}
+
+.tech-grid-bg {
+  background-image: radial-gradient(rgba(40, 51, 45, 0.4) 1px, transparent 1px);
+  background-size: 24px 24px;
+}

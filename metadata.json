@@ -1,0 +1,6 @@
+{
+  "name": "TechCrystal - Dark Tech Affiliate Hub",
+  "description": "TechCrystal technology website featuring verified gadget reviews, tech comparisons, buying guides, custom affiliate letter management, and a sleek Dark Tech neon aesthetic.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
